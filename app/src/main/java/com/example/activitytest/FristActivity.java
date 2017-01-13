@@ -1,5 +1,6 @@
 package com.example.activitytest;
 
+import android.content.Intent;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +20,12 @@ public class FristActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(FristActivity.this, "you clicked Button 1", Toast.LENGTH_SHORT).show();
-                finish();
+                //finish();
+                //Intent intent = new Intent(FristActivity.this, SecendActivity.class);
+                //startActivity(intent);
+                Intent intent = new Intent("com.example.activitytest.ACTION_START");
+                intent.addCategory("com.example.activitytest.MY_CATEGORY");
+                startActivity(intent);
             }
         });
     }
